@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,38 +23,16 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {Button} from 'castiel-ts-rn-spike-bob/lib/module/v3/components';
+import IconButtonV3 from 'castiel-ts-rn-spike-bob/lib/module/v3/components/IconButton';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import ButtonV2 from 'castiel-ts-rn-spike-bob/lib/module/v2/components/Button';
+import IconButtonV2 from 'castiel-ts-rn-spike-bob/lib/module/v2/components/IconButton';
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import ButtonV1 from 'castiel-ts-rn-spike-bob/lib/module/components/Button';
+import IconButtonV1 from 'castiel-ts-rn-spike-bob/lib/module/components/IconButton';
 
-function App(): React.JSX.Element {
+function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -71,26 +48,12 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+        <Button label="Click" />
+        <IconButtonV3 label="Click" />
+        <ButtonV2 label="Click" />
+        <IconButtonV2 label="Click" />
+        <ButtonV1 label="Click" />
+        <IconButtonV1 label="Click" />
       </ScrollView>
     </SafeAreaView>
   );

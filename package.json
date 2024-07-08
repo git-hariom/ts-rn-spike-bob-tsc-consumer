@@ -10,8 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "castiel-ts-rn-spike-bob": "/Users/hariom.sinha/Code-Playground/TS-RN-Spike-Bob/TSRNBobPackage/castiel-ts-rn-spike-bob-0.0.14.tgz",
     "react": "18.2.0",
-    "react-native": "0.74.2"
+    "react-native": "0.74.2",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
